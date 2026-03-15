@@ -2,7 +2,7 @@ import GlyphGrid from "./GlyphGrid";
 
 function HeroSection() {
   return (
-    <section className="min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-8 md:px-24 py-20">
+    <section className="md:min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-8 md:px-24 py-20">
       <div className="max-w-3xl space-y-6">
         <p className="font-mono text-accent-main tracking-[0.3em] uppercase text-xs">
           // Systems Engineer & Developer
@@ -23,7 +23,7 @@ function HeroSection() {
           </button>
         </div>
       </div>
-      <div className="w-full md:w-1/2 h-96 mt-12 md:mt-0">
+      <div className="w-full h-full">
         <GlyphGrid />
       </div>
     </section>

@@ -9,7 +9,7 @@ const GLYPHS = [
 // we isolate this so when you hover one dot, react ONLY re-renders this one dot, not all 100.
 const Cell = () => {
   const [isActive, setIsActive] = useState(false);
-  const [glyph, setGlyph] = useState("·");
+  const [glyph, setGlyph] = useState("");
 
   useEffect(() => {
 
@@ -26,7 +26,7 @@ const Cell = () => {
         // fade back to a dot after 800ms
         setTimeout(() => {
           setIsActive(false);
-          setGlyph("·");
+          setGlyph("");
         }, 800);
       }, randomDelay);
 
@@ -43,17 +43,17 @@ const Cell = () => {
     // fade back to a dot after 800ms
     setTimeout(() => {
       setIsActive(false);
-      setGlyph("·");
+      setGlyph("");
     }, 800);
   }, []);
 
   return (
     <div
       onMouseEnter={handleMouseEnter}
-      className={`flex items-center justify-center cursor-crosshair text-sm transition-all duration-500 select-none ${
+      className={`flex items-center justify-center h-5 w-5 text-sm transition-all duration-500 select-none ${
         isActive 
-          ? "text-primary font-bold drop-shadow-[0_0_8px_rgba(34,197,94,0.8)] scale-110" 
-          : "text-neutral-800 font-normal scale-100"
+          ? "text-primary font-bold drop-shadow-[0_0_8px_rgba(34,197,94,0.8)] md:scale-110" 
+          : "text-neutral-800 md:font-normal md:scale-100"
       }`}
     >
       {glyph}
@@ -63,8 +63,8 @@ const Cell = () => {
 
 export default function GlyphGrid() {
   return (
-    <div className="w-full h-full p-6 grid grid-cols-10 grid-rows-10 font-mono bg-base rounded-sm">
-      {Array.from({ length: 100 }).map((_, i) => (
+    <div className="w-full p-2 md:p-6 grid grid-cols-15 grid-rows-15 font-mono bg-base gap-1 rounded-sm md:gap-y-8 gap-x-2 justify-items-center cursor-crosshair">
+      {Array.from({ length: 225 }).map((_, i) => (
         <Cell key={i} />
       ))}
     </div>

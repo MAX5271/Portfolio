@@ -5,7 +5,7 @@ export const LanguageIcons =[
     },
     {
         name:"TypeScript",
-        icon:"i-logos-typescript-icon"
+        icon:"i-devicon-typescript"
     },
     {
         name:"Python",
@@ -25,7 +25,7 @@ export const LanguageIcons =[
     },
     {
         name: "SQL",
-        icon: "i-logos-sql"
+        icon: "i-material-symbols-sql"
     },
     {
         name: "HTML",
@@ -48,11 +48,11 @@ export const FrameworkIcons = [
     },
     {
         name: "Express",
-        icon: "i-logos-express"
+        icon: "i-devicon-express invert"
     },
     {
         name: "Prisma",
-        icon: "i-logos-prisma"
+        icon: "i-logos-prisma invert"
     },
     {
         name: "Redux Toolkit",
@@ -64,7 +64,7 @@ export const FrameworkIcons = [
     },
     {
         name: "Supabase",
-        icon: "i-logos-supabase"
+        icon: "i-devicon-supabase"
     }
 ]
 
@@ -75,7 +75,7 @@ export const ToolIcons = [
     },
     {
         name: "GitHub",
-        icon: "i-logos-github"
+        icon: "i-devicon-github invert"
     },
     {
         name: "Linux",
@@ -83,11 +83,11 @@ export const ToolIcons = [
     },
     {
         name: "Vercel",
-        icon: "i-logos-vercel"
+        icon: "i-devicon-vercel invert"
     },
     {
         name: "Render",
-        icon: "i-logos-render"
+        icon: "i-simple-icons-render"
     },
     {
         name: "Arduino",
@@ -102,7 +102,7 @@ export const DatabaseIcons = [
     },
     {
         name: "MongoDB",
-        icon: "i-logos-mongodb"
+        icon: "i-devicon-mongodb"
     },
     {
         name: "MySQL",

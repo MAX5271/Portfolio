@@ -3,10 +3,12 @@
 @import "tailwindcss";
 @plugin "@egoist/tailwindcss-icons";
 
-@theme {
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-sans: 'Inter', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+
+/* Base Styles - even is something is left unstyled or some kind of tearing is experienced the base background colour will be present */
+@layer base {
+    body {
+        @apply bg-base;
+    }
 }
 
 :root,
