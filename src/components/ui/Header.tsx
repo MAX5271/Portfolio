@@ -1,18 +1,28 @@
-function Header() {
+export function Header() {
   return (
-    <div className="bg-surface text-primary border-b border-subtle h-14 flex items-center justify-between">
-      <div className=" px-8 font-code text-2xl tracking-wider">~/nitigya</div>
-      <div className="flex items-center space-x-4 px-8">
-        <a href="#projects" className="text-secondary hover:text-primary duration-200">Projects</a>
-        <a href="#skills" className="text-secondary hover:text-primary duration-200">Skills</a>
-        <a href="#contact" className="text-secondary hover:text-primary duration-200">Contact</a>
-      </div>
-      <div className="flex flex-row items-center justify-center text-secondary hover:text-primary duration-200 px-8 cursor-pointer">
-        <div className="h-[9px] w-[9px] mt-1 mr-1 font-medium bg-green-500 rounded-full mr-1"></div>
-        available for work
+    <nav className="bg-base text-primary border-b border-subtle h-16 flex items-center justify-between px-4 md:px-12 sticky top-0 z-50">
+      
+      <div className="flex items-center gap-3">
+        <div className="font-mono text-xl md:text-2xl tracking-tight text-primary">
+          ~/nitigya
         </div>
-    </div>
+
+        <div className="lg:hidden h-2 w-2 bg-green-500 rounded-full animate-pulse" title="Available"></div>
+      </div>
+
+      <div className="hidden md:flex items-center space-x-8 font-sans text-sm uppercase tracking-widest text-secondary">
+        <a href="#projects" className="hover:text-primary transition-colors duration-300">Projects</a>
+        <a href="#skills" className="hover:text-primary transition-colors duration-300">Skills</a>
+        <a href="#contact" className="hover:text-primary transition-colors duration-300">Contact</a>
+      </div>
+
+      <div className="flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-2 text-xs font-mono text-secondary hover:text-primary transition-colors cursor-pointer">
+          <div className="h-2 w-2 bg-green-500 rounded-full shadow-[0_0_8px_#22c55e]"></div>
+          available for work
+        </div>
+      </div>
+      
+    </nav>
   );
 }
-
-export default Header;
