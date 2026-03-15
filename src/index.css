@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;700;900&display=swap');
+
+@import "tailwindcss";
+@plugin "@egoist/tailwindcss-icons";
+
+@theme {
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root,
+[data-theme="minimalism"] {
+    /* Theme Variables */
+    --theme-base: #050505;
+    --theme-surface: #121212;
+    --theme-elevated: #1e1e1e;
+    /*Border */
+    --theme-subtle: #262626;
+    --theme-strong: #404040;
+    /* Text */
+    --theme-primary: #fafafa;
+    --theme-secondary: #a3a3a3;
+    --theme-muted: #525252;
+    /* Accent */
+    --theme-accent-main: #ffffff;
+    --theme-accent-glow: #ccff00;
+    /* Radius */
+    --theme-radius-razor: 0.125rem;
+    --theme-micro-curve: 2px;
+    --theme-structural-curve: 6px;
+    /* Custom Font Variables */
+    --custom-font-heading: 'Space Grotesk', sans-serif;
+    --custom-font-body: 'Inter', sans-serif;
+    --custom-font-code: 'JetBrains Mono', monospace;
+
+}
+
+@theme {
+    --color-base: var(--theme-base);
+    --color-surface: var(--theme-surface);
+    --color-elevated: var(--theme-elevated);
+    --color-subtle: var(--theme-subtle);
+    --color-strong: var(--theme-strong);
+    --color-primary: var(--theme-primary);
+    --color-secondary: var(--theme-secondary);
+    --color-muted: var(--theme-muted);
+    --color-accent-main: var(--theme-accent-main);
+    --color-accent-glow: var(--theme-accent-glow);
+    --radius-razor: var(--theme-radius-razor);
+    --radius-micro-curve: var(--theme-micro-curve);
+    --radius-structural-curve: var(--theme-structural-curve);
+    --font-display: var(--custom-font-heading);
+    --font-sans: var(--custom-font-body);
+    --font-mono: var(--custom-font-code);
+}
