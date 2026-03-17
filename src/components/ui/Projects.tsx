@@ -29,7 +29,7 @@ export default function ProjectShelf() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 px-4 md:px-12 lg:px-24">
+    <section id="projects" className="py-24 px-4 md:px-12 lg:px-24">
       <div className="w-full mb-12 flex justify-between items-end border-b border-subtle pb-6">
         <h2 className="text-5xl font-display font-black text-primary tracking-tighter">
           Selected_Works.

@@ -2,29 +2,43 @@ import GlyphGrid from "./GlyphGrid";
 
 function HeroSection() {
   return (
-    <section className="md:min-h-[80vh] flex flex-col md:flex-row items-center justify-between px-8 md:px-24 py-20">
-      <div className="max-w-3xl space-y-6">
-        <p className="font-mono text-accent-main tracking-[0.3em] uppercase text-xs">
+    <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center px-8 py-20 gap-12 lg:gap-24 max-w-7xl mx-auto">
+      <div className="w-full lg:w-auto flex-1 max-w-2xl space-y-8 z-10">
+        <p className="font-mono text-accent-main tracking-[0.3em] uppercase text-xs md:text-sm">
           // Systems Engineer & Developer
         </p>
-        <h1 className="font-display text-6xl md:text-8xl font-black text-primary tracking-tighter leading-[0.9]">
+        <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-black text-primary tracking-tighter leading-[0.9]">
           NITIGYA <br /> <span className="text-secondary">Chandel.</span>
         </h1>
-        <p className="font-sans text-xl text-secondary max-w-md leading-relaxed font-light">
+        <p className="font-sans text-lg md:text-xl text-neutral-400 max-w-md leading-relaxed font-light">
           Building robust, full-stack applications with a focus on user
           experience and optimized performance.
         </p>
-        <div className="flex gap-6 pt-4">
-          <button className="px-8 py-3 bg-primary text-surface font-mono text-sm font-bold hover:bg-accent-main transition-colors">
+        <div className="flex gap-4 pt-4">
+          <a href="#projects" className="px-6 py-3 md:px-8 border border-primary bg-primary text-surface font-mono text-xs md:text-sm font-bold hover:bg-transparent hover:text-primary transition-all duration-300">
             [ VIEW_WORK ]
-          </button>
-          <button className="px-8 py-3 border border-subtle text-primary font-mono text-sm hover:border-primary transition-colors">
+          </a>
+          <a href="#telemetry" className="px-6 py-3 md:px-8 border border-subtle text-primary font-mono text-xs md:text-sm hover:border-primary hover:bg-white/5 transition-all duration-300">
             CONTACT.exe
-          </button>
+          </a>
         </div>
       </div>
-      <div className="w-full h-full">
-        <GlyphGrid />
+
+      <div className="w-full max-w-md flex-shrink-0 relative border border-subtle bg-surface flex flex-col shadow-2xl overflow-hidden group aspect-square">
+        <div className="flex items-center justify-between px-4 py-2 border-b border-subtle bg-neutral-900/50">
+          <div className="flex gap-2">
+            <div className="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-red-500 transition-colors"></div>
+            <div className="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-yellow-500 transition-colors"></div>
+            <div className="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-green-500 transition-colors"></div>
+          </div>
+          <p className="font-mono text-[10px] text-neutral-500 tracking-widest">
+            sys.matrix_render
+          </p>
+        </div>
+
+        <div className="flex-1 w-full h-full flex items-center justify-center p-2">
+          <GlyphGrid />
+        </div>
       </div>
     </section>
   );

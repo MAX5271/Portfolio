@@ -12,7 +12,7 @@ const SKILL_CATEGORIES = [
 
 function Skills() {
   return (
-    <section className="py-24 px-8 md:px-24">
+    <section id="skills" className="py-24 px-8 md:px-24">
       
       <div className="mb-16">
         <h2 className="text-5xl md:text-6xl font-display font-black text-primary tracking-tighter">

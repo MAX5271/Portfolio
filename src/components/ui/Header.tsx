@@ -13,7 +13,7 @@ export function Header() {
       <div className="hidden md:flex items-center space-x-8 font-sans text-sm uppercase tracking-widest text-secondary">
         <a href="#projects" className="hover:text-primary transition-colors duration-300">Projects</a>
         <a href="#skills" className="hover:text-primary transition-colors duration-300">Skills</a>
-        <a href="#contact" className="hover:text-primary transition-colors duration-300">Contact</a>
+        <a href="#telemetry" className="hover:text-primary transition-colors duration-300">Contact</a>
       </div>
 
       <div className="flex items-center gap-6">
