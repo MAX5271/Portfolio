@@ -52,7 +52,7 @@ const Cell = () => {
       onMouseEnter={handleMouseEnter}
       className={`flex items-center justify-center h-5 w-5 text-sm transition-all duration-500 select-none ${
         isActive 
-          ? "text-primary font-bold drop-shadow-[0_0_8px_rgba(34,197,94,0.8)] md:scale-110" 
+          ? "text-primary font-bold animate-pulse drop-shadow-[0_0_8px_rgba(34,197,94,0.8)] md:scale-110" 
           : "text-neutral-800 md:font-normal md:scale-100"
       }`}
     >
