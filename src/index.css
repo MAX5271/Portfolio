@@ -39,7 +39,7 @@ body::before {
     --theme-base: #050505;
     --theme-surface: #121212;
     --theme-elevated: #1e1e1e;
-    --bg-pattern: url('../public/nnnoise.svg');
+    --bg-pattern: url('../public/minimalism.svg');
     --theme-subtle: #262626;
     --theme-strong: #404040;
     --theme-primary: #fafafa;
