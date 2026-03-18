@@ -17,20 +17,20 @@ function HeroSection() {
         <div className="flex gap-4 pt-4">
           <a
             href="#projects"
-            className="px-6 py-3 md:px-8 border-2 border-btn-work-border bg-btn-work-bg text-btn-work-text font-mono text-xs md:text-sm font-bold transition-all active:translate-y-1 active:translate-x-1 [filter:var(--skill-glow)] hover:[filter:none] hover:bg-transparent hover:text-primary"
+            className="px-6 py-3 md:px-8 border-2 border-btn-work-border bg-btn-work-bg text-btn-work-text font-mono text-xs md:text-sm font-bold transition-all active:translate-y-1 active:translate-x-1 [filter:var(--skill-glow)] hover:[filter:none] hover:bg-transparent hover:text-primary rounded-micro-curve"
           >
             [ VIEW_WORK ]
           </a>
           <a
             href="#telemetry"
-            className="px-6 py-3 md:px-8 border-2 border-btn-contact-border bg-btn-contact-bg text-btn-contact-text font-mono text-xs md:text-sm font-bold transition-all active:translate-y-1 active:translate-x-1 [filter:var(--skill-glow)] hover:[filter:none] hover:border-primary hover:bg-white/5"
+            className="px-6 py-3 md:px-8 border-2 border-btn-contact-border bg-btn-contact-bg text-btn-contact-text font-mono text-xs md:text-sm font-bold transition-all active:translate-y-1 active:translate-x-1 [filter:var(--skill-glow)] hover:[filter:none] hover:border-primary hover:bg-white/5 rounded-micro-curve"
           >
             CONTACT.exe
           </a>
         </div>
       </div>
 
-      <div className="w-full max-w-md flex-shrink-0 relative border border-subtle bg-surface flex flex-col shadow-2xl overflow-hidden group aspect-square [filter:var(--matrix-glow)]">
+      <div className="w-full max-w-md flex-shrink-0 relative border border-subtle bg-surface flex flex-col shadow-2xl overflow-hidden group aspect-square [filter:var(--matrix-glow)] rounded-structural-curve">
         <div className="flex items-center justify-between px-4 py-2 border-b border-subtle bg-elevated">
           <div className="flex gap-2">
             <div className="w-2 h-2 rounded-full bg-strong group-hover:bg-red-500 transition-colors"></div>
@@ -38,7 +38,7 @@ function HeroSection() {
             <div className="w-2 h-2 rounded-full bg-strong group-hover:bg-green-500 transition-colors"></div>
           </div>
           <p className="font-mono text-[10px] text-primary tracking-widest">
-            sys.matrix_render
+            max.matrix_render_v2
           </p>
         </div>
 

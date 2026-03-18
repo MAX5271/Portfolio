@@ -1,4 +1,5 @@
 import ThemeEngine from "./components/buttons/ThemeEngine"
+import Footer from "./components/ui/Footer"
 import {Header} from "./components/ui/Header"
 import HeroSection from "./components/ui/HeroSection"
 import Projects from "./components/ui/Projects"
@@ -15,6 +16,7 @@ function App() {
       <Projects/>
       <Telemetry/>
       <ThemeEngine/>
+      <Footer/>
     </div>
   )
 }

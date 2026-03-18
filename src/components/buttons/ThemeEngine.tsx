@@ -4,6 +4,7 @@ const THEMES = [
   { id: "minimalism", label: "SYS.MINIMAL" },
   { id: "neo-brutalism", label: "SYS.BRUTAL" },
   { id: "cyberpunk", label: "SYS.CYBER" }, 
+  { id: "nord", label: "SYS.NORD" },
 ];
 
 export default function ThemeEngine() {
@@ -20,7 +21,7 @@ export default function ThemeEngine() {
   }, [activeTheme]);
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center p-1 border-2 border-strong bg-surface/80 backdrop-blur-md shadow-2xl transition-all duration-300">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center p-1 border-2 border-strong bg-surface/80 backdrop-blur-md shadow-2xl transition-all duration-300 rounded-structural-curve">
       {THEMES.map((theme) => {
         const isActive = activeTheme === theme.id;
 
@@ -28,7 +29,7 @@ export default function ThemeEngine() {
           <button
             key={theme.id}
             onClick={() => setActiveTheme(theme.id)}
-            className={`px-4 py-2 font-mono text-xs font-bold uppercase transition-all duration-300 ${
+            className={`px-4 py-2 font-mono text-xs font-bold uppercase transition-all duration-300 rounded-micro-curve ${
               isActive
                 ? "bg-primary text-surface" 
                 : "text-secondary hover:text-primary hover:bg-elevated" 

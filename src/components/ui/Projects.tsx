@@ -12,7 +12,6 @@ const PROJECTS = [
     image: gamevaultImg,
     livelink: "https://game-vault-cyan.vercel.app",
     src: "https://github.com/MAX5271/GameVault",
-    themeVar: "var(--theme-pop-purple)"
   },
   {
     id: "nectar",
@@ -23,7 +22,6 @@ const PROJECTS = [
     image: nectarImg,
     livelink: "https://nectar-tau.vercel.app",
     src: "https://github.com/MAX5271/Nectar",
-    themeVar: "var(--theme-pop-mint)"
   },
 ];
 
@@ -51,12 +49,11 @@ export default function ProjectShelf() {
           return (
             <div
               key={project.id}
-              style={{ "--section-color": project.themeVar } as React.CSSProperties}
               onPointerEnter={(e) => {
                 if (e.pointerType === "mouse") setActiveIndex(index);
               }}
               onClick={() => setActiveIndex(isActive ? null : index)}
-              className={`relative overflow-hidden cursor-pointer transition-[flex] duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border-2 border-strong bg-surface ${
+              className={`relative overflow-hidden cursor-pointer transition-[flex] duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] border-2 border-strong bg-surface rounded-structural-curve ${
                 isActive ? "flex-[4] md:flex-[5]" : "flex-1"
               }`}
             >
@@ -78,15 +75,14 @@ export default function ProjectShelf() {
                 }`}
               >
                 <div className="max-w-xl">
-                  <p 
-                    style={{ color: "var(--section-color)" }}
-                    className="font-mono text-xs md:text-sm mb-3 tracking-[0.2em] uppercase font-bold"
-                  >
+                  <p className="font-mono text-accent-main text-xs md:text-sm mb-3 tracking-[0.2em] uppercase font-bold">
                     // {project.stack}
                   </p>
-                  <h3 className="text-4xl md:text-6xl font-black text-primary mb-4 tracking-tighter leading-none whitespace-nowrap uppercase">
+                  
+                  <h3 className="text-4xl md:text-6xl font-display font-black text-primary mb-4 tracking-tighter leading-none whitespace-nowrap uppercase transition-colors">
                     {project.title}
                   </h3>
+                  
                   <p className="text-muted text-sm md:text-lg leading-relaxed mb-6 md:mb-8 line-clamp-3 font-medium">
                     {project.description}
                   </p>
@@ -96,7 +92,7 @@ export default function ProjectShelf() {
                       href={project.livelink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-3 md:px-6 bg-primary text-base font-mono text-xs md:text-sm font-bold border-2 border-primary hover:bg-transparent hover:text-primary transition-colors"
+                      className="px-5 py-3 md:px-6 bg-primary text-base font-mono text-xs md:text-sm font-bold border-2 border-primary hover:bg-transparent hover:text-primary transition-colors rounded-micro-curve"
                     >
                       [ VIEW_LIVE ]
                     </a>
@@ -104,7 +100,7 @@ export default function ProjectShelf() {
                       href={project.src}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-3 md:px-6 border-2 border-strong text-primary font-mono text-xs md:text-sm font-bold hover:border-primary transition-colors"
+                      className="px-5 py-3 md:px-6 border-2 border-strong text-primary font-mono text-xs md:text-sm font-bold hover:border-primary transition-colors rounded-micro-curve"
                     >
                       SOURCE.exe
                     </a>
@@ -117,9 +113,7 @@ export default function ProjectShelf() {
                   isActive ? "opacity-0 pointer-events-none" : "opacity-100"
                 }`}
               >
-                <h3
-                  className="text-2xl font-black text-secondary tracking-widest uppercase md:rotate-180 whitespace-nowrap [writing-mode:horizontal-tb] md:[writing-mode:vertical-rl]"
-                >
+                <h3 className="text-2xl font-display font-black text-secondary tracking-widest uppercase md:rotate-180 whitespace-nowrap [writing-mode:horizontal-tb] md:[writing-mode:vertical-rl] transition-colors">
                   {project.title}
                 </h3>
               </div>

@@ -54,14 +54,14 @@ export default function Telemetry() {
             ~/github/activity_log
           </h3>
 
-          <div className="p-6 border-2 border-strong bg-[#0a0a0a] overflow-x-auto relative">
+          <div className="p-6 border-2 border-strong bg-[#0a0a0a] overflow-x-auto relative rounded-structural-curve">
             <div className="absolute top-4 left-4 flex gap-2">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
 
-            <div className="pt-8 text-white">
+            <div className="pt-8 text-white [&_text]:fill-white [&_span]:text-white">
               <GitHubCalendar
                 username="MAX5271"
                 colorScheme="dark"
@@ -75,7 +75,7 @@ export default function Telemetry() {
           <a
             href="/NitigyaChandelResume.pdf"
             download="Nitigya_Chandel_Resume.pdf"
-            className="w-full block text-center px-6 py-4 mt-2 border-2 border-btn-work-border bg-btn-work-bg text-btn-work-text font-mono text-sm font-bold tracking-widest hover:bg-transparent hover:text-primary transition-all duration-300 active:translate-y-1 active:translate-x-1"
+            className="w-full block text-center px-6 py-4 mt-2 border-2 border-btn-work-border bg-btn-work-bg text-btn-work-text font-mono text-sm font-bold tracking-widest hover:bg-transparent hover:text-primary transition-all duration-300 active:translate-y-1 active:translate-x-1 hover:[filter:var(--matrix-glow)] rounded-micro-curve"
           >
             [ DOWNLOAD_RESUME.pdf ]
           </a>
@@ -96,7 +96,7 @@ export default function Telemetry() {
                 style={
                   { "--section-color": ping.themeVar } as React.CSSProperties
                 }
-                className="group flex items-center justify-between p-4 border-2 border-strong bg-surface transition-all duration-300 hover:-translate-y-1 hover:-translate-x-1 hover:[filter:drop-shadow(6px_6px_0_var(--section-color))]"
+                className="group flex items-center justify-between p-4 border-2 border-strong bg-surface transition-all duration-300 hover:-translate-y-1 hover:-translate-x-1 hover:[filter:drop-shadow(6px_6px_0_var(--section-color))] rounded-micro-curve"
               >
                 <div className="flex items-center gap-4">
                   <span
