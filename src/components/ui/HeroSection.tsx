@@ -24,14 +24,14 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="w-full max-w-md flex-shrink-0 relative border border-subtle bg-surface flex flex-col shadow-2xl overflow-hidden group aspect-square">
+      <div className="w-full max-w-md flex-shrink-0 relative border border-subtle bg-surface flex flex-col shadow-2xl overflow-hidden group aspect-square [filter:var(--matrix-glow)]">
         <div className="flex items-center justify-between px-4 py-2 border-b border-subtle bg-neutral-900/50">
           <div className="flex gap-2">
             <div className="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-red-500 transition-colors"></div>
             <div className="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-yellow-500 transition-colors"></div>
             <div className="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-green-500 transition-colors"></div>
           </div>
-          <p className="font-mono text-[10px] text-neutral-500 tracking-widest">
+          <p className="font-mono text-[10px] text-primary tracking-widest">
             sys.matrix_render
           </p>
         </div>

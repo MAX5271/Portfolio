@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;700&family=Public+Sans:wght@400;700;900&family=Space+Grotesk:wght@500;700;900&display=swap');
 @import "tailwindcss";
 @plugin "@egoist/tailwindcss-icons";
 
-
-/* Base Styles - even is something is left unstyled or some kind of tearing is experienced the base background colour will be present */
-@layer base {
-    body {
-        @apply bg-base;
-    }
-}
-
+/* Base Styles */
 html {
   scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--theme-base);
+    color: var(--theme-primary);
+    
+    background-image: var(--bg-pattern);
+    background-attachment: fixed;
+    background-size: 100px 100px;
+    background-repeat: repeat;
+
+    /* Add a smooth crossfade between themes */
+    transition: background-color 0.3s ease, color 0.3s ease, background-image 0.3s ease;
 }
 
 :root,
@@ -21,25 +26,59 @@ html {
     --theme-base: #050505;
     --theme-surface: #121212;
     --theme-elevated: #1e1e1e;
-    /*Border */
+    
+    --bg-pattern: url('../public/nnnoise.svg');
+    
     --theme-subtle: #262626;
     --theme-strong: #404040;
-    /* Text */
+    
     --theme-primary: #fafafa;
     --theme-secondary: #a3a3a3;
     --theme-muted: #525252;
-    /* Accent */
+    
     --theme-accent-main: #ffffff;
     --theme-accent-glow: #ccff00;
-    /* Radius */
+    
     --theme-radius-razor: 0.125rem;
     --theme-micro-curve: 2px;
     --theme-structural-curve: 6px;
-    /* Custom Font Variables */
+    
     --custom-font-heading: 'Space Grotesk', sans-serif;
     --custom-font-body: 'Inter', sans-serif;
     --custom-font-code: 'JetBrains Mono', monospace;
 
+    --matrix-glow: drop-shadow(0 0 20px #1a1b1c);
+    --char-glow: drop-shadow(0 0 8px #ffffff);
+}
+
+[data-theme="neo-brutalism"] {
+    /* Theme variables */
+    --theme-base: #f4f4f0; 
+    --theme-surface: #ffffff; 
+    --theme-elevated: #e8e8e8; 
+    
+    --bg-pattern: url('../public/brutal-grid.svg');
+    
+    --theme-subtle: #000000; 
+    --theme-strong: #000000; 
+    
+    --theme-primary: #000000; 
+    --theme-secondary: #222222; 
+    --theme-muted: #444444;
+    
+    --theme-accent-main: #ff3366; 
+    --theme-accent-glow: #000000; 
+    
+    --theme-radius-razor: 0px; 
+    --theme-micro-curve: 0px;
+    --theme-structural-curve: 0px;
+    
+    --custom-font-heading: 'Archivo Black', system-ui, sans-serif; 
+    --custom-font-body: 'Public Sans', system-ui, sans-serif; 
+    --custom-font-code: 'JetBrains Mono', monospace;
+
+    --matrix-glow: drop-shadow(8px 8px 0 #ff0000);
+    --char-glow: none;
 }
 
 @theme {
@@ -53,9 +92,11 @@ html {
     --color-muted: var(--theme-muted);
     --color-accent-main: var(--theme-accent-main);
     --color-accent-glow: var(--theme-accent-glow);
+    
     --radius-razor: var(--theme-radius-razor);
     --radius-micro-curve: var(--theme-micro-curve);
     --radius-structural-curve: var(--theme-structural-curve);
+    
     --font-display: var(--custom-font-heading);
     --font-sans: var(--custom-font-body);
     --font-mono: var(--custom-font-code);

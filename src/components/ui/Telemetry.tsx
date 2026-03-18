@@ -10,7 +10,7 @@ const PINGS = [
 
 export default function Telemetry() {
   return (
-    <section id="telemetry" className="py-24 px-4 md:px-12 lg:px-24 border-t border-subtle bg-base">
+    <section id="telemetry" className="py-24 px-4 md:px-12 lg:px-24 border-t border-subtle">
       
       <div className="w-full mb-16 flex justify-between items-end border-b border-subtle pb-6">
         <h2 className="text-5xl font-display font-black text-primary tracking-tighter">

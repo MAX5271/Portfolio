@@ -1,8 +1,6 @@
 import { DatabaseIcons, FrameworkIcons, LanguageIcons, ToolIcons } from "../../utils/icons";
 import SkillButton from "../buttons/SkillButton";
 
-// 1. The Data Payload
-// We map the titles directly to their respective arrays to completely eliminate repetitive JSX.
 const SKILL_CATEGORIES = [
   { title: "~/languages", data: LanguageIcons },
   { title: "~/frameworks", data: FrameworkIcons },
