@@ -10,26 +10,32 @@ function HeroSection() {
         <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-black text-primary tracking-tighter leading-[0.9]">
           NITIGYA <br /> <span className="text-secondary">Chandel.</span>
         </h1>
-        <p className="font-sans text-lg md:text-xl text-neutral-400 max-w-md leading-relaxed font-light">
+        <p className="font-sans text-lg md:text-xl text-muted max-w-md leading-relaxed font-light">
           Building robust, full-stack applications with a focus on user
           experience and optimized performance.
         </p>
         <div className="flex gap-4 pt-4">
-          <a href="#projects" className="px-6 py-3 md:px-8 border border-primary bg-primary text-surface font-mono text-xs md:text-sm font-bold hover:bg-transparent hover:text-primary transition-all duration-300">
+          <a
+            href="#projects"
+            className="px-6 py-3 md:px-8 border-2 border-btn-work-border bg-btn-work-bg text-btn-work-text font-mono text-xs md:text-sm font-bold transition-all active:translate-y-1 active:translate-x-1 [filter:var(--skill-glow)] hover:[filter:none] hover:bg-transparent hover:text-primary"
+          >
             [ VIEW_WORK ]
           </a>
-          <a href="#telemetry" className="px-6 py-3 md:px-8 border border-subtle text-primary font-mono text-xs md:text-sm hover:border-primary hover:bg-white/5 transition-all duration-300">
+          <a
+            href="#telemetry"
+            className="px-6 py-3 md:px-8 border-2 border-btn-contact-border bg-btn-contact-bg text-btn-contact-text font-mono text-xs md:text-sm font-bold transition-all active:translate-y-1 active:translate-x-1 [filter:var(--skill-glow)] hover:[filter:none] hover:border-primary hover:bg-white/5"
+          >
             CONTACT.exe
           </a>
         </div>
       </div>
 
       <div className="w-full max-w-md flex-shrink-0 relative border border-subtle bg-surface flex flex-col shadow-2xl overflow-hidden group aspect-square [filter:var(--matrix-glow)]">
-        <div className="flex items-center justify-between px-4 py-2 border-b border-subtle bg-neutral-900/50">
+        <div className="flex items-center justify-between px-4 py-2 border-b border-subtle bg-elevated">
           <div className="flex gap-2">
-            <div className="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-red-500 transition-colors"></div>
-            <div className="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-yellow-500 transition-colors"></div>
-            <div className="w-2 h-2 rounded-full bg-neutral-700 group-hover:bg-green-500 transition-colors"></div>
+            <div className="w-2 h-2 rounded-full bg-strong group-hover:bg-red-500 transition-colors"></div>
+            <div className="w-2 h-2 rounded-full bg-strong group-hover:bg-yellow-500 transition-colors"></div>
+            <div className="w-2 h-2 rounded-full bg-strong group-hover:bg-green-500 transition-colors"></div>
           </div>
           <p className="font-mono text-[10px] text-primary tracking-widest">
             sys.matrix_render

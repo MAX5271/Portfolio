@@ -2,7 +2,6 @@
 @import "tailwindcss";
 @plugin "@egoist/tailwindcss-icons";
 
-/* Base Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -10,19 +9,15 @@ html {
 body {
     background-color: var(--theme-base);
     color: var(--theme-primary);
-    
     background-image: var(--bg-pattern);
     background-attachment: fixed;
     background-size: 100px 100px;
     background-repeat: repeat;
-
-    /* Add a smooth crossfade between themes */
     transition: background-color 0.3s ease, color 0.3s ease, background-image 0.3s ease;
 }
 
 :root,
 [data-theme="minimalism"] {
-    /* Theme Variables */
     --theme-base: #050505;
     --theme-surface: #121212;
     --theme-elevated: #1e1e1e;
@@ -38,6 +33,12 @@ body {
     
     --theme-accent-main: #ffffff;
     --theme-accent-glow: #ccff00;
+
+    --theme-pop-yellow: #1f1a00;
+    --theme-pop-blue: #001133;
+    --theme-pop-mint: #001f14;
+    --theme-pop-purple: #170a26;
+    --theme-pop-orange: #261000;
     
     --theme-radius-razor: 0.125rem;
     --theme-micro-curve: 2px;
@@ -48,11 +49,29 @@ body {
     --custom-font-code: 'JetBrains Mono', monospace;
 
     --matrix-glow: drop-shadow(0 0 20px #1a1b1c);
+    --skill-glow: drop-shadow(0 0 20px #1a1b1c);
     --char-glow: drop-shadow(0 0 8px #ffffff);
+
+    --theme-btn-work-bg: var(--theme-primary);
+    --theme-btn-work-text: var(--theme-surface);
+    --theme-btn-work-border: var(--theme-primary);
+
+    --theme-btn-contact-bg: transparent;
+    --theme-btn-contact-text: var(--theme-primary);
+    --theme-btn-contact-border: var(--theme-subtle);
+
+    --theme-skill-lang: var(--theme-secondary);
+    --theme-skill-frame: var(--theme-secondary);
+    --theme-skill-tool: var(--theme-secondary);
+    --theme-skill-database: var(--theme-secondary);
+
+    --shadow-skill-lang: drop-shadow(0 0 20px #1a1b1c);
+    --shadow-skill-frame: drop-shadow(0 0 20px #1a1b1c);
+    --shadow-skill-tool: drop-shadow(0 0 20px #1a1b1c);
+    --shadow-skill-database: drop-shadow(0 0 20px #1a1b1c);
 }
 
 [data-theme="neo-brutalism"] {
-    /* Theme variables */
     --theme-base: #f4f4f0; 
     --theme-surface: #ffffff; 
     --theme-elevated: #e8e8e8; 
@@ -63,11 +82,17 @@ body {
     --theme-strong: #000000; 
     
     --theme-primary: #000000; 
-    --theme-secondary: #222222; 
+    --theme-secondary: #ff0000; 
     --theme-muted: #444444;
     
     --theme-accent-main: #ff3366; 
     --theme-accent-glow: #000000; 
+    
+    --theme-pop-yellow: #ffdf00;
+    --theme-pop-blue: #0055ff;
+    --theme-pop-mint: #00ffa6;
+    --theme-pop-purple: #b554ff;
+    --theme-pop-orange: #ff6600;
     
     --theme-radius-razor: 0px; 
     --theme-micro-curve: 0px;
@@ -78,7 +103,26 @@ body {
     --custom-font-code: 'JetBrains Mono', monospace;
 
     --matrix-glow: drop-shadow(8px 8px 0 #ff0000);
+    --skill-glow: drop-shadow(4px 4px 0 #ff0000);
     --char-glow: none;
+
+    --theme-btn-work-bg: var(--theme-pop-yellow);
+    --theme-btn-work-text: #000000;
+    --theme-btn-work-border: #000000;
+
+    --theme-btn-contact-bg: var(--theme-pop-mint);
+    --theme-btn-contact-text: #000000;
+    --theme-btn-contact-border: #000000;
+
+    --theme-skill-lang: var(--theme-pop-blue);
+    --theme-skill-frame: var(--theme-pop-mint);
+    --theme-skill-tool: var(--theme-pop-purple);
+    --theme-skill-database: var(--theme-pop-orange);
+
+    --shadow-skill-lang: drop-shadow(-4px 4px 0 var(--theme-pop-blue));
+    --shadow-skill-frame: drop-shadow(4px 4px 0 var(--theme-pop-mint));
+    --shadow-skill-tool: drop-shadow(-4px 4px 0 var(--theme-pop-purple));
+    --shadow-skill-database: drop-shadow(4px 4px 0 var(--theme-pop-orange));
 }
 
 @theme {
@@ -100,4 +144,23 @@ body {
     --font-display: var(--custom-font-heading);
     --font-sans: var(--custom-font-body);
     --font-mono: var(--custom-font-code);
+
+    --color-pop-yellow: var(--theme-pop-yellow);
+    --color-pop-blue: var(--theme-pop-blue);
+    --color-pop-mint: var(--theme-pop-mint);
+    --color-pop-purple: var(--theme-pop-purple);
+    --color-pop-orange: var(--theme-pop-orange);
+
+    --color-btn-work-bg: var(--theme-btn-work-bg);
+    --color-btn-work-text: var(--theme-btn-work-text);
+    --color-btn-work-border: var(--theme-btn-work-border);
+
+    --color-btn-contact-bg: var(--theme-btn-contact-bg);
+    --color-btn-contact-text: var(--theme-btn-contact-text);
+    --color-btn-contact-border: var(--theme-btn-contact-border);
+
+    --color-skill-lang:var(--theme-skill-lang);
+    --color-skill-frame:var(--theme-skill-frame);
+    --color-skill-tool:var(--theme-skill-tool);
+    --color-skill-database:var(--theme-skill-database);
 }

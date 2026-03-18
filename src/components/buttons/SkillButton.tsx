@@ -1,13 +1,14 @@
 interface SkillButtonProps {
     name: string;
     icon: string;
+    themeVar:string;
 }
 
-function SkillButton({ name, icon }: SkillButtonProps) {
+function SkillButton({ name, icon,themeVar }: SkillButtonProps) {
   return (
-    <div className="flex justify-center items-center bg-surface text-primary border-subtle hover:bg-elevated hover:border-strong duration-200 rounded-md px-4 py-2 cursor-pointer">
+    <div className={`flex justify-center items-center bg-[#121212] text-[#fafafa] border-subtle hover:bg-[#1e1e1e] hover:border-strong duration-200 rounded-structural-curve px-4 py-2 cursor-pointer ${themeVar}`}>
       <span className={`${icon} text-2xl`}></span>
-      <span className="ml-2 text-primary">{name}</span>
+      <span className="ml-2 text-[#fafafa]">{name}</span>
     </div>
   )
 }
