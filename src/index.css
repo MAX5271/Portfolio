@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;700&family=Public+Sans:wght@400;700;900&family=Space+Grotesk:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chakra+Petch:wght@400;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700;900&family=Public+Sans:wght@400;700;900&family=Space+Grotesk:wght@500;700;900&display=swap');
 @import "tailwindcss";
 @plugin "@egoist/tailwindcss-icons";
 
@@ -21,50 +21,38 @@ body {
     --theme-base: #050505;
     --theme-surface: #121212;
     --theme-elevated: #1e1e1e;
-    
     --bg-pattern: url('../public/nnnoise.svg');
-    
     --theme-subtle: #262626;
     --theme-strong: #404040;
-    
     --theme-primary: #fafafa;
     --theme-secondary: #a3a3a3;
     --theme-muted: #525252;
-    
     --theme-accent-main: #ffffff;
     --theme-accent-glow: #ccff00;
-
     --theme-pop-yellow: #1f1a00;
     --theme-pop-blue: #001133;
     --theme-pop-mint: #001f14;
     --theme-pop-purple: #170a26;
     --theme-pop-orange: #261000;
-    
     --theme-radius-razor: 0.125rem;
     --theme-micro-curve: 2px;
     --theme-structural-curve: 6px;
-    
     --custom-font-heading: 'Space Grotesk', sans-serif;
     --custom-font-body: 'Inter', sans-serif;
     --custom-font-code: 'JetBrains Mono', monospace;
-
     --matrix-glow: drop-shadow(0 0 20px #1a1b1c);
     --skill-glow: drop-shadow(0 0 20px #1a1b1c);
     --char-glow: drop-shadow(0 0 8px #ffffff);
-
     --theme-btn-work-bg: var(--theme-primary);
     --theme-btn-work-text: var(--theme-surface);
     --theme-btn-work-border: var(--theme-primary);
-
     --theme-btn-contact-bg: transparent;
     --theme-btn-contact-text: var(--theme-primary);
     --theme-btn-contact-border: var(--theme-subtle);
-
     --theme-skill-lang: var(--theme-secondary);
     --theme-skill-frame: var(--theme-secondary);
     --theme-skill-tool: var(--theme-secondary);
     --theme-skill-database: var(--theme-secondary);
-
     --shadow-skill-lang: drop-shadow(0 0 20px #1a1b1c);
     --shadow-skill-frame: drop-shadow(0 0 20px #1a1b1c);
     --shadow-skill-tool: drop-shadow(0 0 20px #1a1b1c);
@@ -75,54 +63,92 @@ body {
     --theme-base: #f4f4f0; 
     --theme-surface: #ffffff; 
     --theme-elevated: #e8e8e8; 
-    
     --bg-pattern: url('../public/brutal-grid.svg');
-    
     --theme-subtle: #000000; 
     --theme-strong: #000000; 
-    
     --theme-primary: #000000; 
     --theme-secondary: #ff0000; 
     --theme-muted: #444444;
-    
     --theme-accent-main: #ff3366; 
     --theme-accent-glow: #000000; 
-    
     --theme-pop-yellow: #ffdf00;
     --theme-pop-blue: #0055ff;
     --theme-pop-mint: #00ffa6;
     --theme-pop-purple: #b554ff;
     --theme-pop-orange: #ff6600;
+    --theme-radius-razor: 0px; 
+    --theme-micro-curve: 0px;
+    --theme-structural-curve: 0px;
+    --custom-font-heading: 'Archivo Black', system-ui, sans-serif; 
+    --custom-font-body: 'Public Sans', system-ui, sans-serif; 
+    --custom-font-code: 'JetBrains Mono', monospace;
+    --matrix-glow: drop-shadow(8px 8px 0 #ff0000);
+    --skill-glow: drop-shadow(4px 4px 0 #ff0000);
+    --char-glow: none;
+    --theme-btn-work-bg: var(--theme-pop-yellow);
+    --theme-btn-work-text: #000000;
+    --theme-btn-work-border: #000000;
+    --theme-btn-contact-bg: var(--theme-pop-mint);
+    --theme-btn-contact-text: #000000;
+    --theme-btn-contact-border: #000000;
+    --theme-skill-lang: var(--theme-pop-blue);
+    --theme-skill-frame: var(--theme-pop-mint);
+    --theme-skill-tool: var(--theme-pop-purple);
+    --theme-skill-database: var(--theme-pop-orange);
+    --shadow-skill-lang: drop-shadow(-4px 4px 0 var(--theme-pop-blue));
+    --shadow-skill-frame: drop-shadow(4px 4px 0 var(--theme-pop-mint));
+    --shadow-skill-tool: drop-shadow(-4px 4px 0 var(--theme-pop-purple));
+    --shadow-skill-database: drop-shadow(4px 4px 0 var(--theme-pop-orange));
+}
+
+[data-theme="cyberpunk"] {
+    --theme-base: #09090e; 
+    --theme-surface: #12101c; 
+    --theme-elevated: #1a1528; 
+    
+    --bg-pattern: url('../public/nnnoise.svg');
+    
+    --theme-subtle: #2d1b4e; 
+    --theme-strong: #5c2799; 
+    
+    --theme-primary: #e2d8f0; 
+    --theme-secondary: #00f0ff; 
+    --theme-muted: #7a68a3;
+    
+    --theme-accent-main: #ff003c; 
+    --theme-accent-glow: rgba(255, 0, 60, 0.6); 
+    
+    --theme-pop-yellow: #fcee0a;
+    --theme-pop-blue: #00f0ff;
+    --theme-pop-mint: #00ff9f;
+    --theme-pop-purple: #bd00ff;
+    --theme-pop-orange: #ff5e00;
     
     --theme-radius-razor: 0px; 
     --theme-micro-curve: 0px;
     --theme-structural-curve: 0px;
     
-    --custom-font-heading: 'Archivo Black', system-ui, sans-serif; 
-    --custom-font-body: 'Public Sans', system-ui, sans-serif; 
+    --custom-font-heading: 'Orbitron', sans-serif; 
+    --custom-font-body: 'Chakra Petch', sans-serif; 
     --custom-font-code: 'JetBrains Mono', monospace;
 
-    --matrix-glow: drop-shadow(8px 8px 0 #ff0000);
-    --skill-glow: drop-shadow(4px 4px 0 #ff0000);
-    --char-glow: none;
+    --matrix-glow: drop-shadow(0 0 15px var(--theme-accent-main));
+    --char-glow: drop-shadow(0 0 10px var(--theme-secondary));
 
-    --theme-btn-work-bg: var(--theme-pop-yellow);
-    --theme-btn-work-text: #000000;
-    --theme-btn-work-border: #000000;
+    --theme-btn-work-bg: transparent;
+    --theme-btn-work-text: var(--theme-pop-yellow);
+    --theme-btn-work-border: var(--theme-pop-yellow);
 
-    --theme-btn-contact-bg: var(--theme-pop-mint);
-    --theme-btn-contact-text: #000000;
-    --theme-btn-contact-border: #000000;
+    --theme-btn-contact-bg: transparent;
+    --theme-btn-contact-text: var(--theme-pop-blue);
+    --theme-btn-contact-border: var(--theme-pop-blue);
 
     --theme-skill-lang: var(--theme-pop-blue);
     --theme-skill-frame: var(--theme-pop-mint);
     --theme-skill-tool: var(--theme-pop-purple);
     --theme-skill-database: var(--theme-pop-orange);
 
-    --shadow-skill-lang: drop-shadow(-4px 4px 0 var(--theme-pop-blue));
-    --shadow-skill-frame: drop-shadow(4px 4px 0 var(--theme-pop-mint));
-    --shadow-skill-tool: drop-shadow(-4px 4px 0 var(--theme-pop-purple));
-    --shadow-skill-database: drop-shadow(4px 4px 0 var(--theme-pop-orange));
+    --skill-glow: drop-shadow(0 0 12px var(--section-color));
 }
 
 @theme {
