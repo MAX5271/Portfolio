@@ -1,17 +1,21 @@
 export function Header() {
   return (
+
     <nav className="bg-base text-primary border-b-2 border-strong h-16 flex items-center justify-between px-4 md:px-12 sticky top-0 z-50 transition-colors duration-300">
       <div className="flex items-center gap-3">
+        {/* Username at top left */}
         <div className="font-mono text-xl md:text-2xl tracking-tight text-primary font-bold">
           ~/max
         </div>
 
+        {/* Available for work, not visible on large screens */}
         <div
           className="lg:hidden h-2 w-2 bg-accent-main rounded-full shadow-[0_0_8px_var(--theme-accent-glow)] animate-pulse"
           title="Available"
         ></div>
       </div>
 
+      {/* Links to various sections of portfolio */}
       <div className="hidden md:flex items-center space-x-8 font-display text-sm uppercase tracking-widest text-secondary">
         <a
           href="#projects"
@@ -36,6 +40,7 @@ export function Header() {
         </a>
       </div>
 
+      {/*Available for work, present only on large screens  */}
       <div className="flex items-center gap-6">
         <div className="hidden lg:flex items-center gap-2 text-xs font-mono text-secondary hover:text-primary transition-colors cursor-pointer font-bold uppercase">
           <div className="h-2 w-2 bg-accent-main rounded-full shadow-[0_0_8px_var(--theme-accent-glow)] animate-pulse"></div>

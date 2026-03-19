@@ -1,16 +1,21 @@
 import { useState, useCallback, useEffect } from "react";
 
+
+// Symbols shown, symbolising the path chosen
 const GLYPHS = [
-  "0", "1", "0", "1", "0", "1", 
+  "0", "1", 
   "ニ", "ティ", "ギ", "ャ", 
   "源", "変", "完", "字", "易", "私", "中", "横", "応", "表", "形", "化", "理", "原", "直", "純", "己"
 ];
 
+// Each character displayed is it's own cell in the unconventional 15x15 grid.
 const Cell = () => {
-  const [isActive, setIsActive] = useState(false);
-  
+
+  //State variables
+  const [isActive, setIsActive] = useState(false);  
   const [glyph, setGlyph] = useState("·");
 
+  // Random Kanji generator useEffect
   useEffect(() => {
     const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -26,20 +31,24 @@ const Cell = () => {
         }, 1000);
       }, randomDelay);
 
+      //Cleanup function.
       return () => clearTimeout(timeoutId);
     }
   }, [isActive]);
 
+  //Tracks mouse pointer and generates Kanji
   const handleMouseEnter = useCallback(() => {
     setIsActive(true);
     setGlyph(GLYPHS[Math.floor(Math.random() * GLYPHS.length)]);
 
+    // Glyph active for 1s
     setTimeout(() => {
       setIsActive(false);
       setGlyph("·");
     }, 1000);
   }, []);
 
+  //Returning each individual cell
   return (
     <div
       onMouseEnter={handleMouseEnter}
@@ -53,6 +62,8 @@ const Cell = () => {
     </div>
   );
 };
+
+//Glyph grid defining the actual 15x15 grid
 
 export default function GlyphGrid() {
   return (

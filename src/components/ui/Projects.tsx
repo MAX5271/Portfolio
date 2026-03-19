@@ -2,6 +2,7 @@ import { useState } from "react";
 import nectarImg from "../../assets/nectar.png";
 import gamevaultImg from "../../assets/gamevault.png";
 
+//List of the projects
 const PROJECTS = [
   {
     id: "gamevault",
@@ -29,7 +30,11 @@ export default function ProjectShelf() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section id="projects" className="py-24 px-4 md:px-12 lg:px-24 max-w-[100rem] mx-auto">
+    <section
+      id="projects"
+      className="py-24 px-4 md:px-12 lg:px-24 max-w-[100rem] mx-auto"
+    >
+      {/* Project Heading Section */}
       <div className="w-full mb-12 flex justify-between items-end border-b-4 border-strong pb-6">
         <h2 className="text-5xl md:text-6xl font-display font-black text-primary tracking-tighter uppercase">
           Personal_Projects.
@@ -39,14 +44,17 @@ export default function ProjectShelf() {
         </p>
       </div>
 
-      <div 
+      {/* Actual div that encloses all the projects */}
+      <div
         className="flex flex-col md:flex-row w-full h-[700px] md:h-[600px] gap-4"
         onMouseLeave={() => setActiveIndex(null)}
       >
+        {/* Project array mapped for different Projects */}
         {PROJECTS.map((project, index) => {
           const isActive = activeIndex === index;
 
           return (
+            //Div that selects the active project to expand when the cursor enters to show the project in detail
             <div
               key={project.id}
               onPointerEnter={(e) => {
@@ -57,6 +65,7 @@ export default function ProjectShelf() {
                 isActive ? "flex-[4] md:flex-[5]" : "flex-1"
               }`}
             >
+              {/* Expanded project section, reduced opacity and grayscale on inactive */}
               <div className="absolute inset-0 z-0 bg-base">
                 <img
                   src={project.image}
@@ -65,24 +74,27 @@ export default function ProjectShelf() {
                     isActive ? "opacity-90 grayscale-0" : "opacity-30 grayscale"
                   }`}
                 />
-                
+
                 <div className="absolute inset-0 bg-gradient-to-t from-base via-base/80 to-transparent mix-blend-normal"></div>
               </div>
-              
+
+                  {/*Project details, opacity 0 when the div is not active  */}
               <div
                 className={`absolute inset-0 z-10 p-6 md:p-12 flex flex-col justify-end transition-opacity duration-700 delay-100 ${
-                  isActive ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                  isActive
+                    ? "opacity-100 pointer-events-auto"
+                    : "opacity-0 pointer-events-none"
                 }`}
               >
                 <div className="max-w-xl">
                   <p className="font-mono text-accent-main text-xs md:text-sm mb-3 tracking-[0.2em] uppercase font-bold">
                     // {project.stack}
                   </p>
-                  
+
                   <h3 className="text-4xl md:text-6xl font-display font-black text-primary mb-4 tracking-tighter leading-none whitespace-nowrap uppercase transition-colors">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-muted text-sm md:text-lg leading-relaxed mb-6 md:mb-8 line-clamp-3 font-medium">
                     {project.description}
                   </p>

@@ -1,3 +1,4 @@
+// Interface defining the Skill button requirements
 interface SkillButtonProps {
     name: string;
     icon: string;
