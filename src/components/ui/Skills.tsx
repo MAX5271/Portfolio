@@ -39,7 +39,7 @@ function Skills() {
     <section id="skills" className="py-24 px-8 max-w-7xl mx-auto">
       <div className="mb-16 border-b-4 border-strong pb-8">
         {/* Title */}
-        <h2 className="text-5xl md:text-6xl font-display font-black text-primary tracking-tighter uppercase">
+        <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-black text-primary tracking-tighter uppercase">
           Technical_Skills.
         </h2>
       </div>

@@ -44,7 +44,7 @@ export default function Telemetry() {
 
         {/* Title */}
       <div className="w-full mb-16 flex justify-between items-end border-b-4 border-strong pb-6">
-        <h2 className="text-5xl md:text-6xl font-display font-black text-primary tracking-tighter uppercase">
+        <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-black text-primary tracking-tighter uppercase">
           System_Telemetry.
         </h2>
         <p className="font-mono text-secondary text-sm hidden md:block uppercase tracking-widest font-bold">

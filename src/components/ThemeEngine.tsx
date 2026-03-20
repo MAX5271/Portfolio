@@ -39,13 +39,13 @@ export default function ThemeEngine() {
           <button
             key={theme.id}
             onClick={() => setActiveTheme(theme.id)}
-            className={`px-4 py-2 font-mono text-xs font-bold uppercase transition-all duration-300 rounded-micro-curve ${
+            className={`px-1 md:px-4 py-2 font-mono text-xs font-bold uppercase transition-all duration-300 rounded-micro-curve ${
               isActive
                 ? "bg-primary text-surface" 
                 : "text-secondary hover:text-primary hover:bg-elevated" 
             }`}
           >
-            [ {theme.label} ]
+            [{theme.label}]
           </button>
         );
       })}
