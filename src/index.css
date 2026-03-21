@@ -39,7 +39,7 @@ body::before {
     --theme-base: #050505;
     --theme-surface: #121212;
     --theme-elevated: #1e1e1e;
-    --bg-pattern: url('../public/minimalism.svg');
+    --bg-pattern: url('../public/minimalism.png');
     --theme-subtle: #262626;
     --theme-strong: #404040;
     --theme-primary: #fafafa;
@@ -81,7 +81,7 @@ body::before {
     --theme-base: #f4f4f0; 
     --theme-surface: #ffffff; 
     --theme-elevated: #e8e8e8; 
-    --bg-pattern: url('../public/brutal-grid.svg');
+    --bg-pattern: url('../public/brutal-grid.png');
     --theme-subtle: #000000; 
     --theme-strong: #000000; 
     --theme-primary: #000000; 
@@ -124,7 +124,7 @@ body::before {
     --theme-surface: #12101c; 
     --theme-elevated: #1a1528; 
     
-    --bg-pattern: url('../public/cyber.svg');
+    --bg-pattern: url('../public/cyber.png');
     
     --theme-subtle: #2d1b4e; 
     --theme-strong: #5c2799; 
@@ -174,7 +174,7 @@ body::before {
     --theme-surface: #3b4252; 
     --theme-elevated: #434c5e; 
     
-    --bg-pattern: url('../public/nord.svg');
+    --bg-pattern: url('../public/nord.png');
     
     --theme-subtle: #4c566a; 
     --theme-strong: #81a1c1; 
