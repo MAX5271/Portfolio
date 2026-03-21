@@ -20,7 +20,7 @@ const Cell = () => {
     const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
     if(!isActive) {
-      const randomDelay = randomInt(30000, 50000);
+      const randomDelay = randomInt(10000, 25000);
       const timeoutId = setTimeout(() => {
         setIsActive(true);
         setGlyph(GLYPHS[Math.floor(Math.random() * GLYPHS.length)]);
