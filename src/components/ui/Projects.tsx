@@ -1,6 +1,7 @@
 import { useState } from "react";
 import nectarImg from "../../assets/nectar.png";
 import gamevaultImg from "../../assets/gamevault.png";
+import hydra from "../../assets/hydra.png";
 
 //List of the projects
 const PROJECTS = [
@@ -24,6 +25,14 @@ const PROJECTS = [
     livelink: "https://nectar-tau.vercel.app",
     src: "https://github.com/MAX5271/Nectar",
   },
+  {
+    id: "hydraFs",
+    title: "HydraFS",
+    stack: "CPP + Boost.Asio",
+    description:"HydraFS is a high-performance, distributed filesystem designed to shard, transmit, and manage data across a network.",
+    image: hydra,
+    src:"https://github.com/MAX5271/HydraFS"
+  }
 ];
 
 export default function ProjectShelf() {
@@ -99,15 +108,17 @@ export default function ProjectShelf() {
                     {project.description}
                   </p>
 
-                  <div className="flex gap-4">
+                    <div className="flex gap-4">
+                      {project.livelink &&
                     <a
                       href={project.livelink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-5 py-3 md:px-6 bg-primary text-base font-mono text-xs md:text-sm font-bold border-2 border-primary hover:bg-transparent hover:text-primary transition-colors rounded-micro-curve"
-                    >
+                      >
                       [ VIEW_LIVE ]
                     </a>
+                    }
                     <a
                       href={project.src}
                       target="_blank"
